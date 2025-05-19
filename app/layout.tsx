@@ -35,7 +35,7 @@ export default function RootLayout({
           accentColor="plum"
         >
           <Navbar />
-          <div className="pt-16">
+          <div className="pt-32">
             {children}
           </div>
         </Theme>

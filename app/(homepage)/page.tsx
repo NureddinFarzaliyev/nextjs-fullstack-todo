@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <Container>
+    <Container className="absolute top-0 w-full">
       <Flex
         direction="column"
         justify="center"
