@@ -1,6 +1,7 @@
 import { Grid } from "@radix-ui/themes"
 import TodoCard from "./TodoCard"
 import { TodoModel } from "@/app/(models)/todoModel"
+import NewTodoButton from "./NewTodoButton"
 
 // TODO: Delete, edit and complete buttons appear on hover
 // TODO: Add new todo button 
@@ -22,6 +23,7 @@ const TodoList =
             <TodoCard todo={todo} key={idx} />
           ))
         }
+        <NewTodoButton />
       </Grid >
     )
   }

@@ -3,7 +3,7 @@ import { Heading, Container, Link } from "@radix-ui/themes"
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 h-16 flex items-center border-b border-b-gray-50/10 w-full z-10">
+    <header className="fixed top-0 h-16 flex items-center border-b border-b-gray-50/10 w-full z-10 bg-[var(--color-background)]">
       <Container>
         <div className="flex items-center justify-between">
           <Heading>Todo</Heading>
