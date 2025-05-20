@@ -1,8 +1,6 @@
-"use client"
-
-import { AspectRatio, Grid, Heading, Text } from "@radix-ui/themes"
+import { Grid } from "@radix-ui/themes"
 import { TodoModel } from "../(models)/todoModel"
-import { ClockIcon } from "@radix-ui/react-icons"
+import TodoCard from "./TodoCard"
 
 // TODO: Delete, edit and complete buttons appear on hover
 // TODO: Add new todo button 
@@ -20,23 +18,8 @@ const TodoList =
         className="w-full mt-5"
       >
         {
-          todos.map((todo) => (
-            <AspectRatio
-              className={`flex gap-2 flex-col justify-end rounded-[var(--radius-1)] px-3 pt-2 pb-4 border border-white/20
-                ${todo.completed ? "opacity-25" : "hover:bg-white/5 cursor-pointer transition-colors duration-200"}`}
-              ratio={1}
-              key={todo.id}
-            >
-              <Text
-                size="1"
-                className="flex gap-1 items-center opacity-75"
-              >
-                <ClockIcon /> {todo.due}
-              </Text>
-              <Heading size="3">
-                {todo.title}
-              </Heading>
-            </AspectRatio>
+          todos.map((todo, idx) => (
+            <TodoCard todo={todo} key={idx} />
           ))
         }
       </Grid >

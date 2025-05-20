@@ -3,7 +3,11 @@ import React from 'react'
 import TodoList from './TodoList'
 
 const Page = async () => {
-  const res = await fetch('http://localhost:3000/api/')
+  const res = await fetch('http://localhost:3000/api/', {
+    next: {
+      tags: ['todos'],
+    }
+  })
   const todos = await res.json()
 
   return (
