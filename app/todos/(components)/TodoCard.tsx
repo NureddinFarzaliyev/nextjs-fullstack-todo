@@ -1,10 +1,10 @@
 "use client"
 
 import { AspectRatio, Heading, Text } from "@radix-ui/themes"
-import { TodoModel } from "../(models)/todoModel"
 import { ClockIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import ToggleCompleteButton from "./ToggleCompleteButton"
+import { TodoModel } from "@/app/(models)/todoModel"
 
 const TodoCard = ({
   todo

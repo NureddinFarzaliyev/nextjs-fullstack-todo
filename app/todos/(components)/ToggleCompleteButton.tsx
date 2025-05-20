@@ -1,8 +1,8 @@
 "use client"
 import { AnimatePresence, motion } from 'framer-motion'
 import { CheckIcon, Cross2Icon, DotFilledIcon } from "@radix-ui/react-icons"
-import { toggleComplete } from './actions'
 import { useState } from 'react'
+import { toggleComplete } from '../actions'
 
 const ToggleCompleteButton = ({
   isCompleted,

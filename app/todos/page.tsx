@@ -1,14 +1,10 @@
 import { Container, Heading } from '@radix-ui/themes'
 import React from 'react'
-import TodoList from './TodoList'
+import TodoList from './(components)/TodoList'
+import { fetchTodos } from './actions'
 
 const Page = async () => {
-  const res = await fetch('http://localhost:3000/api/', {
-    next: {
-      tags: ['todos'],
-    }
-  })
-  const todos = await res.json()
+  const todos = await fetchTodos()
 
   return (
     <Container>

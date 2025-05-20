@@ -1,6 +1,6 @@
 import { Grid } from "@radix-ui/themes"
-import { TodoModel } from "../(models)/todoModel"
 import TodoCard from "./TodoCard"
+import { TodoModel } from "@/app/(models)/todoModel"
 
 // TODO: Delete, edit and complete buttons appear on hover
 // TODO: Add new todo button 
