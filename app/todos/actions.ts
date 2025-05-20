@@ -42,3 +42,15 @@ export const createTodo = async (todo: CreateTodoModel) => {
   revalidateTag('todos')
   console.log(data)
 }
+
+export const deleteTodo = async (id: number) => {
+  const res = await fetch(`http://localhost:3000/api/${id}`, {
+    method: 'DELETE',
+  })
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  revalidateTag('todos')
+}
